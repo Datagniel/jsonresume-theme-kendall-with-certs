@@ -235,6 +235,32 @@
             </ul>
           </div>
           {{/educationBool}}
+          {{#certificates.length}}
+          <!-- CERTIFICATES -->
+          <div class="box">
+            <h2><i class="fas fa-certificate ico"></i> Certificates</h2>
+            {{#certificates}}
+            <div class="job clearfix">
+              <div class="row">
+                <div class="details">
+                  <div class="where">
+                    {{issuer}}
+                    <div class="pull-right">{{date}}</div>
+                  </div>
+                  <div class="description">
+                    {{#url}}
+                      <a href="{{url}}" target="_blank">{{name}}</a>
+                    {{/url}}
+                    {{^url}}
+                      {{name}}
+                    {{/url}}
+                  </div>
+                </div>
+              </div>
+            </div>
+            {{/certificates}}
+          </div>
+          {{/certificates.length}}
           {{#skillsBool}}
           <!-- SKILLS -->
           <div class="box">
